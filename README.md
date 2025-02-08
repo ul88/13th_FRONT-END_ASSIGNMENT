@@ -12,4 +12,4 @@
 
 ### week1
 
-- <a href="./junho/week1/index.html"> 준호 </a>
+- <a href="https://likelionsch.github.io/13th_FRONT-END_ASSIGNMENT/junho/week1/index.html"> 준호 </a>
