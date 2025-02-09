@@ -14,4 +14,4 @@
 
 - <a href="https://likelionsch.github.io/13th_FRONT-END_ASSIGNMENT/junho/week1/index.html">금준호</a>
 - <a href="https://likelionsch.github.io/13th_FRONT-END_ASSIGNMENT/21박성진/week1/calc.html">박성진</a>
-- <a href="https://likelionsch.github.io/13th_FRONT-END_ASSIGNMENT/hanul/week1/calc.html">김한울</a>
+- <a href="https://likelionsch.github.io/13th_FRONT-END_ASSIGNMENT/hanul/week1/calc/calc.html">김한울</a>
