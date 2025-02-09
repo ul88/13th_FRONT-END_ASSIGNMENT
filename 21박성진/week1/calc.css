@@ -42,8 +42,7 @@ body{
     margin : 5%;
 }
 
-.op_buttons{
-    background-color: rgb(206, 206, 206);
+.op_buttons, .num_buttons{
     border-radius : 12px;
     width : 60px;
     height : 60px;
@@ -58,22 +57,12 @@ body{
     /*transform -> 요소 크기 위치 회전 변화__ 0.1초 간 속성 변화 적용*/
     /*box-shadow -> 그림자 추가__ 0.1초 간 속성 변화 적용*/
 }
+.op_buttons{
+    background-color: rgb(206, 206, 206);
+}
 
 .num_buttons{
     background-color: rgb(234, 231, 231);
-    border-radius : 12px;
-    width : 60px;
-    height : 60px;
-    margin:5px;
-    display:flex;
-    justify-content: center;
-    align-items: center;
-    text-align: center;
-    font-size: 20px;
-    transition: transform 0.1s ease, box-shadow 0.1s ease;
-    /*transition-> 요소 상태 변화 (애니메이션 효과 추가)*/
-    /*transform -> 요소 크기 위치 회전 변화__ 0.1초 간 속성 변화 적용*/
-    /*box-shadow -> 그림자 추가__ 0.1초 간 속성 변화 적용*/
 }
 
 /*커서 효과*/
