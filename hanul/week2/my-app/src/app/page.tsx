@@ -1,6 +1,6 @@
 "use client"
 import { useState } from 'react'
-import "./page.css"
+import styles from "./page.module.css"
 
 export default function Home() {
   const [res, setRes] = useState("0")
@@ -10,19 +10,28 @@ export default function Home() {
   const [resOp, setResOp] = useState("0")
   const [op, setOp] = useState("")
 
-  function addNumber(num: string){
-    if(num === "." && res.indexOf(".") !== -1) return
+  function addNumber(event: React.MouseEvent<HTMLDivElement>){
+    const n = event.currentTarget.textContent
+    if(n == null) return
+
+    if(n === "." && res.indexOf(".") !== -1) return
     if(op === "="){
-      setRes(num)
+      setRes(n)
       setOp("")
+      return
     }
-    else if(res === "0" && num !== "."){
-      setRes(num)
+    
+    if(res === "0" && n !== "."){
+      setRes(n)
+      return
     }
-    else setRes(res+num)
+
+    setRes(res+n)
   }
 
-  function buttonFuncion(n : string){
+  function buttonFuncion(event: React.MouseEvent<HTMLDivElement>){
+    const n = event.currentTarget.textContent
+    
     switch(n){
       case "CE":
         if(op !== "="){
@@ -33,18 +42,18 @@ export default function Home() {
         setRes("0")
         setFirstNum("0")
         setOp("")
-        break
-      case "d":
+        return
+      case "⌫":
         if(res !== ""){
           setRes(res.substring(0, res.length - 1))
         }
-        break
+        return
     }
   }
 
   function calc(n : string){
     if(firstNum !== "0"){
-      var temp = 0
+      let temp = 0
       switch(op){
         case "+":
           temp = Number.parseFloat(firstNum) + Number.parseFloat(n)
@@ -67,20 +76,25 @@ export default function Home() {
     }
   }
 
-  function calcButton(n : string){
+  function calcButton(event: React.MouseEvent<HTMLDivElement>){
+    const n = event.currentTarget.textContent
+    if(n == null) return
+
     if(op === "="){
       setOp(n)
+      return
     }
-    else if(op === "") {
+
+    if(op === "") {
       setFirstNum(res)
       setRes("0")
       setOp(n)
+      return
     }
-    else{
-      calc(res)
-      setOp(n)
-      setRes("0")
-    }
+
+    calc(res)
+    setOp(n)
+    setRes("0")
   }
 
   function resultButton(){ 
@@ -94,37 +108,30 @@ export default function Home() {
   }
   
   return (
-    <html lang='en'>
-    <head>
-        <title>계산기</title>
-    </head>
-    <body>
-        <div className="content">
-            <div className="sub-result-box">{op === "" ? "0" : (op === "=" ? resNum1 + " " + resOp + " " + resNum2 + " =" : firstNum + " " + op)}</div>
-            <div className="result-box">{res === "0" ? firstNum : (res === "" ? 0 : res)}</div>
-            <div className="calc-btn" onClick={() => calcButton("%")}>%</div>
-            <div className="calc-btn" onClick={() => buttonFuncion("CE")}>CE</div>
-            <div className="calc-btn" onClick={() => buttonFuncion("C")}>C</div>
-            <div className="calc-btn" onClick={() => buttonFuncion("d")}>⌫</div>
-            <div className="number-btn" onClick={() => addNumber("7")}>7</div>
-            <div className="number-btn" onClick={() => addNumber("8")}>8</div>
-            <div className="number-btn" onClick={() => addNumber("9")}>9</div>
-            <div className="calc-btn" onClick={() => calcButton("x")}>x</div>
-            <div className="number-btn" onClick={() => addNumber("4")}>4</div>
-            <div className="number-btn" onClick={() => addNumber("5")}>5</div>
-            <div className="number-btn" onClick={() => addNumber("6")}>6</div>
-            <div className="calc-btn" onClick={() => calcButton("-")}>-</div>
-            <div className="number-btn" onClick={() => addNumber("1")}>1</div>
-            <div className="number-btn" onClick={() => addNumber("2")}>2</div>
-            <div className="number-btn" onClick={() => addNumber("3")}>3</div>
-            <div className="calc-btn" onClick={() => calcButton("+")}>+</div>
-            <div className="calc-btn" onClick={() => calcButton("÷")}>÷</div>
-            <div className="number-btn" onClick={() => addNumber("0")}>0</div>
-            <div className="calc-btn" onClick={() => addNumber(".")}>.</div>
-            <div className="result-btn" onClick={() => resultButton()}>=</div>
+        <div className={styles.content}>
+            <div className={styles["sub-result-box"]}>{op === "" ? "0" : (op === "=" ? resNum1 + " " + resOp + " " + resNum2 + " =" : firstNum + " " + op)}</div>
+            <div className={styles["result-box"]}>{res === "0" ? firstNum : (res === "" ? 0 : res)}</div>
+            <div className={styles["calc-btn"]} onClick={(event) => calcButton(event)}>%</div>
+            <div className={styles["calc-btn"]} onClick={(event) => buttonFuncion(event)}>CE</div>
+            <div className={styles["calc-btn"]} onClick={(event) => buttonFuncion(event)}>C</div>
+            <div className={styles["calc-btn"]} onClick={(event) => buttonFuncion(event)}>⌫</div>
+            <div className={styles["number-btn"]} onClick={(event) => addNumber(event)}>7</div>
+            <div className={styles["number-btn"]}  onClick={(event) => addNumber(event)}>8</div>
+            <div className={styles["number-btn"]}  onClick={(event) => addNumber(event)}>9</div>
+            <div className={styles["calc-btn"]} onClick={(event) => calcButton(event)}>x</div>
+            <div className={styles["number-btn"]} onClick={(event) => addNumber(event)}>4</div>
+            <div className={styles["number-btn"]} onClick={(event) => addNumber(event)}>5</div>
+            <div className={styles["number-btn"]} onClick={(event) => addNumber(event)}>6</div>
+            <div className={styles["calc-btn"]} onClick={(event) => calcButton(event)}>-</div>
+            <div className={styles["number-btn"]} onClick={(event) => addNumber(event)}>1</div>
+            <div className={styles["number-btn"]} onClick={(event) => addNumber(event)}>2</div>
+            <div className={styles["number-btn"]} onClick={(event) => addNumber(event)}>3</div>
+            <div className={styles["calc-btn"]} onClick={(event) => calcButton(event)}>+</div>
+            <div className={styles["calc-btn"]} onClick={(event) => calcButton(event)}>÷</div>
+            <div className={styles["number-btn"]} onClick={(event) => addNumber(event)}>0</div>
+            <div className={styles["calc-btn"]} onClick={(event) => addNumber(event)}>.</div>
+            <div className={styles["result-btn"]} onClick={() => resultButton()}>=</div>
         </div>
-        
-    </body>
-    </html>
+
   );
 }
