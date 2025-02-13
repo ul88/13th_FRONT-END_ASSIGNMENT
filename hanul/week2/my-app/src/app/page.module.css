@@ -1,58 +1,59 @@
-body {
-    background-color: grey;
-}
-.content{
-    background-color: rgb(232, 236, 236);
-    display: flex; 
-    align-items: center;
-    justify-items: center;
-    flex-wrap: wrap; 
-    width: 500px; 
-    height: 650px; 
-    border: 2px solid black; 
-    border-radius: 10px;
-    padding-left: 5px;
-    padding-top: 2px;
-    padding-bottom: 2px;    
+.content {
+  background-color: rgb(232, 236, 236);
+  display: flex;
+  align-items: center;
+  justify-items: center;
+  flex-wrap: wrap;
+  width: 500px;
+  height: 650px;
+  border: 2px solid black;
+  border-radius: 10px;
+  padding-left: 5px;
+  padding-top: 2px;
+  padding-bottom: 2px;
 }
 
-.sub-result-box{
-    width: 100%;
-    padding-right: 2%;
-    text-align: end;
+.sub-result-box {
+  width: 100%;
+  padding-right: 2%;
+  text-align: end;
 }
-.result-box{
-    height: 20%;
-    width: 100%;
-    border: 1px solid grey;
-    text-align: end;
-    line-height: 200%;
-    font-size: 300%;
-    padding-right: 2%;
-}
-
-.number-btn, .calc-btn, .result-btn{
-    text-align: center;
-    line-height: 200%;
-    font-size: 300%;
-    height: 14%;
-    width: 22%;
-    border-radius: 10px;
-    margin-right: 3%;
-}
-.number-btn:hover, .calc-btn:hover, .result-btn:hover{
-    transition: all 0.5s;
-    box-shadow: 0 14px 28px rgba(0,0,0,0.5), 0 -14px 28px rgba(0,0,0,0.5)
+.result-box {
+  height: 20%;
+  width: 100%;
+  border: 1px solid grey;
+  text-align: end;
+  line-height: 200%;
+  font-size: 300%;
+  padding-right: 2%;
 }
 
-.number-btn{
-    background-color: rgb(220, 220, 220);
+.number-btn,
+.calc-btn,
+.result-btn {
+  text-align: center;
+  line-height: 200%;
+  font-size: 300%;
+  height: 14%;
+  width: 22%;
+  border-radius: 10px;
+  margin-right: 3%;
+}
+.number-btn:hover,
+.calc-btn:hover,
+.result-btn:hover {
+  transition: all 0.5s;
+  box-shadow: 0 14px 28px rgba(0, 0, 0, 0.5), 0 -14px 28px rgba(0, 0, 0, 0.5);
 }
 
-.calc-btn{
-    background-color: rgb(213, 218, 215);
+.number-btn {
+  background-color: rgb(220, 220, 220);
 }
 
-.result-btn{
-    background-color: #25559b;
+.calc-btn {
+  background-color: rgb(213, 218, 215);
+}
+
+.result-btn {
+  background-color: #25559b;
 }
