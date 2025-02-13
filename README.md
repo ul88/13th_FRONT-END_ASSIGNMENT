@@ -18,4 +18,4 @@
 
 ### week2
 
-- <a href="https://likelionsch.github.io/13th_FRONT-END_ASSIGNMENT/hanul/week2/my-app/out/indx.html">김한울</a>
+- <a href="https://likelionsch.github.io/13th_FRONT-END_ASSIGNMENT/hanul/week2/my-app/out/index.html">김한울</a>
