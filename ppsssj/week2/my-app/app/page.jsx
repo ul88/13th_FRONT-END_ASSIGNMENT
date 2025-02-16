@@ -1,4 +1,4 @@
-/*"use client";
+"use client";
 
 import { useState } from "react";
 import "./page.css";
@@ -123,4 +123,3 @@ export default function Calculator() {
     </div>
   );
 }
-*/
