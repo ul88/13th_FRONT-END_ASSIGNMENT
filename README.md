@@ -21,3 +21,8 @@
 - <a href="https://likelionsch.github.io/13th_FRONT-END_ASSIGNMENT/hanul/week2/my-app/out/index.html">김한울</a>
 - <a href="https://likelionsch.github.io/13th_FRONT-END_ASSIGNMENT/junho/week2/out/index.html">금준호</a>
 - <a href="https://likelionsch.github.io/13th_FRONT-END_ASSIGNMENT/ppsssj/week2/my-app/out/index.html">박성진</a>
+
+
+### week3
+
+api 주소: http://iubns.net:7000/docs
