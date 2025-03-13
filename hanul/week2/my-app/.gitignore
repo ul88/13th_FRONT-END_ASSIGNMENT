@@ -15,7 +15,7 @@
 
 # next.js
 /.next/
-/out/
+# /out/ #docs에 올리기 위해 주석
 
 # production
 /build
