@@ -1,4 +1,7 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> 26e5ae73389625a2af0f630503b3e72cb9174337
 .content {
   background-color: rgb(232, 236, 236);
   display: flex;
@@ -12,6 +15,7 @@
   padding-left: 5px;
   padding-top: 2px;
   padding-bottom: 2px;
+<<<<<<< HEAD
 =======
 body {
     background-color: grey;
@@ -34,6 +38,8 @@ body {
     padding-top: 1%;
     padding-bottom: 1%;    
 >>>>>>> d5e59d4d81647127bad03791537ce34ddaf29992
+=======
+>>>>>>> 26e5ae73389625a2af0f630503b3e72cb9174337
 }
 
 .sub-result-box {
@@ -42,6 +48,9 @@ body {
   text-align: end;
 }
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> 26e5ae73389625a2af0f630503b3e72cb9174337
 .result-box {
   height: 20%;
   width: 100%;
@@ -62,6 +71,7 @@ body {
   width: 22%;
   border-radius: 10px;
   margin-right: 3%;
+<<<<<<< HEAD
 =======
 .result-box{
     height: 14%;
@@ -86,6 +96,8 @@ body {
     margin-top: 2%;
     margin-bottom: 2%;
 >>>>>>> d5e59d4d81647127bad03791537ce34ddaf29992
+=======
+>>>>>>> 26e5ae73389625a2af0f630503b3e72cb9174337
 }
 .number-btn:hover,
 .calc-btn:hover,
